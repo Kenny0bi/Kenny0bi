@@ -35,3 +35,7 @@ A 5-state credit-risk Markov chain for a neobank and a Q-learning intervention a
 **Serving and apps** FastAPI, Streamlit, Plotly, Firebase (Auth, Realtime Database), REST API design
 
 **Engineering practice** Docker, docker-compose, GitHub Actions CI, pytest, mypy, ruff, Git, reproducible pipelines that validate their own output
+
+---
+
+There's always something new mid-build here. Pick any README and check whether the numbers hold up; every one of them came from an actual run, and checking is half the fun.
