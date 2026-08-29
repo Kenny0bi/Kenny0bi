@@ -9,6 +9,9 @@ The from-scratch series: I build the machinery frameworks hide, prove it correct
 **[ember](https://github.com/Kenny0bi/ember)**
 A tensor autograd engine on raw NumPy: full broadcasting, batched matmul, causal attention, AdamW, cosine schedules. Every op gradient-checked against PyTorch at 1e-9; trained side by side with PyTorch from identical weights, the loss curves agree to 2.7e-07. Then it trains a 624K-parameter GPT on Shakespeare end to end, PyTorch nowhere in the loop.
 
+**[forge-lm](https://github.com/Kenny0bi/forge-lm)**
+LLM pretraining as a controlled experiment: a from-scratch byte-level BPE tokenizer (byte-exact roundtrip, incremental trainer), a RoPE/RMSNorm/SwiGLU decoder with numerical invariant tests, and eleven full training runs across five model sizes and two fixed compute budgets on a 2014 laptop CPU. The 33M model loses to the 1.3M one at every budget, the compute frontier fits a clean power law, and the tier my own background processes contaminated is in the repo next to its clean rerun, because throughput accounting caught it.
+
 ## Data science, data engineering, analytics
 
 **[adverse-event-pipeline](https://github.com/Kenny0bi/adverse-event-pipeline)**
@@ -37,7 +40,7 @@ A 5-state credit-risk Markov chain for a neobank and a Q-learning intervention a
 
 **Machine learning** PyTorch, scikit-learn, XGBoost, Hugging Face Transformers (BioBERT), survival analysis (Cox PH, AFT, DeepSurv), reinforcement learning (DQN, Q-learning, Gymnasium), K-means and PCA, SHAP explainability
 
-**ML engineering** reverse-mode automatic differentiation (from-scratch tensor engine in NumPy), transformer internals (causal attention, pre-norm blocks, GELU) implemented from primitives, optimizer internals (AdamW bias correction, decoupled decay, global-norm clipping, warmup and cosine schedules), gradient checking and finite-difference verification, numerical-parity testing against PyTorch, throughput benchmarking
+**ML engineering** reverse-mode automatic differentiation (from-scratch tensor engine in NumPy), transformer internals (causal attention, RoPE, RMSNorm, SwiGLU, pre-norm blocks, GELU, weight tying) implemented from primitives, BPE tokenization from scratch, LLM pretraining pipelines (gradient accumulation, warmup and cosine schedules, deterministic checkpoint resume), scaling-law experiments and power-law fitting, optimizer internals (AdamW bias correction, decoupled decay, global-norm clipping), gradient checking and finite-difference verification, numerical-parity testing against PyTorch, throughput benchmarking and contention forensics, Manim mathematical animation
 
 **Statistics** frequentist and Bayesian A/B testing, sequential testing (SPRT), power analysis, disproportionality methods (PRR, ROR, BCPNN, MGPS), empirical-Bayes shrinkage, FDR control, Mantel-Haenszel confounding screens, Holt-Winters forecasting, anomaly detection (Isolation Forest, control charts), statsmodels, SciPy
 
