@@ -1,8 +1,6 @@
 # Kenny Obidele
 
-I build data systems end to end and then prove they work. Data science, data engineering, and analytics, with a portfolio that leans healthcare: pipelines that run on real FDA data, warehouses built to clinical standards, and models graded against cohorts where I planted the ground truth on purpose.
-
-One rule holds across everything here: every number in every README comes from actually running the code. When a shipped model turned out to be worse than random, the README says so and walks through the diagnosis, because finding that bug was the real work.
+I build the whole thing: the pipeline that moves the data, the model that learns from it, and the proof that both actually work.
 
 ## Six projects worth your time
 
@@ -24,12 +22,16 @@ Multi-modal survival modeling: Cox PH, XGBoost-AFT, and DeepSurv on structured d
 **[Financial-Risk-mdp-RL](https://github.com/Kenny0bi/Financial-Risk-mdp-RL)**
 A 5-state credit-risk Markov chain for a neobank and a Q-learning intervention agent, including a written diagnosis of why the textbook-default discount factor provably cannot work in this environment while gamma=0.3 converges cleanly.
 
-## How I work
-
-I verify instead of assuming. Synthetic data gets engineered until its funnels, retention curves, and seasonality look like a real product's, because downstream analytics are only as honest as the data underneath. Statistics get pinned to hand-calculated values in tests. Charts get designed from the shape of the data rather than pulled from a library's defaults, then actually rendered and looked at before they ship.
-
 ## Stack
 
-Python, SQL, DuckDB, PostgreSQL/TimescaleDB, Kafka, Spark, dbt, Dagster, pandas, NumPy, scikit-learn, XGBoost, PyTorch, statsmodels, FastAPI, Streamlit, Plotly, Docker, GitHub Actions.
+**Languages** Python, SQL, JavaScript
 
-Also at [github.com/khennyG](https://github.com/khennyG).
+**Data engineering** Kafka, Spark, dbt, Dagster, DuckDB, PostgreSQL, TimescaleDB, Parquet, batch and streaming ETL, data quality gates, dimensional and OMOP CDM modeling
+
+**Machine learning** PyTorch, scikit-learn, XGBoost, Hugging Face Transformers (BioBERT), survival analysis (Cox PH, AFT, DeepSurv), reinforcement learning (DQN, Q-learning, Gymnasium), K-means and PCA, SHAP explainability
+
+**Statistics** frequentist and Bayesian A/B testing, sequential testing (SPRT), power analysis, disproportionality methods (PRR, ROR, BCPNN, MGPS), empirical-Bayes shrinkage, FDR control, Mantel-Haenszel confounding screens, Holt-Winters forecasting, anomaly detection (Isolation Forest, control charts), statsmodels, SciPy
+
+**Serving and apps** FastAPI, Streamlit, Plotly, Firebase (Auth, Realtime Database), REST API design
+
+**Engineering practice** Docker, docker-compose, GitHub Actions CI, pytest, mypy, ruff, Git, reproducible pipelines that validate their own output
