@@ -2,6 +2,13 @@
 
 I build the whole thing: the pipeline that moves the data, the model that learns from it, and the proof that both actually work.
 
+## Scored in public
+
+Work that is measured by somebody other than me, against everyone else, on the same tasks.
+
+**[harmattan](https://github.com/Kenny0bi/harmattan)**
+A probabilistic influenza forecaster for the CDC's FluSight hub, and an independent scorer built from the papers to go with it. It reproduces the CDC Flu Modeling Unit's own published 2025-26 season evaluation from the raw submissions: absolute WIS, MAE and interval coverage match their table for 58 of 58 models to within 0.005. My model then enters that field under a sealed holdout and finishes 36th of 59, beating the CDC's reference baseline by 9.1%. The writeup keeps the methodology error that produced my first attempt, where four hyperparameters tuned against a single season beat the CDC's own ensemble on that season and landed exactly on the baseline out of sample, along with the measurement that explains it: a damped trend beats a flat forecast by 14.3% in one season and 3.2% in the next, so the edge belonged to the season, not the model.
+
 ## Core ML engineering
 
 The from-scratch series, complete at ten: I build the machinery frameworks hide, prove it correct against the production tool, and publish the real numbers, including the failures.
@@ -60,14 +67,14 @@ A 5-state credit-risk Markov chain for a neobank and a Q-learning intervention a
 
 **Languages** Python, SQL, JavaScript, HTML, CSS, Bash, LaTeX
 
-**Data engineering** Kafka, Spark, dbt, Dagster, DuckDB, PostgreSQL, TimescaleDB, Redis, Parquet, batch and streaming ETL, data quality gates, dimensional and OMOP CDM modeling
+**Data engineering** point-in-time data reconstruction and revision handling in surveillance feeds, Kafka, Spark, dbt, Dagster, DuckDB, PostgreSQL, TimescaleDB, Redis, Parquet, batch and streaming ETL, data quality gates, dimensional and OMOP CDM modeling
 
-**Machine learning** PyTorch, scikit-learn, XGBoost, Hugging Face Transformers (BioBERT), survival analysis (Cox PH, AFT, DeepSurv), reinforcement learning (DQN, Q-learning, Gymnasium), K-means and PCA, SHAP explainability, recommender systems (implicit-feedback ALS, BPR and SVD matrix factorization, TF-IDF content models, hybrid ranking with learned blend weights, MMR diversity re-ranking), contextual bandits (LinUCB, Thompson Sampling, annealed epsilon-greedy), ranking evaluation (NDCG, MAP, MRR, catalog coverage, intra-list diversity, novelty), t-SNE embedding cartography
+**Machine learning** probabilistic and quantile forecasting (weighted interval score, pinball loss, empirical predictive distributions from nearest-neighbour residuals, damped-trend models with partial pooling), PyTorch, scikit-learn, XGBoost, Hugging Face Transformers (BioBERT), survival analysis (Cox PH, AFT, DeepSurv), reinforcement learning (DQN, Q-learning, Gymnasium), K-means and PCA, SHAP explainability, recommender systems (implicit-feedback ALS, BPR and SVD matrix factorization, TF-IDF content models, hybrid ranking with learned blend weights, MMR diversity re-ranking), contextual bandits (LinUCB, Thompson Sampling, annealed epsilon-greedy), ranking evaluation (NDCG, MAP, MRR, catalog coverage, intra-list diversity, novelty), t-SNE embedding cartography
 
 **ML engineering** reverse-mode automatic differentiation (from-scratch tensor engine in NumPy), transformer internals (causal attention, RoPE, RMSNorm, SwiGLU, pre-norm blocks, GELU, weight tying) implemented from primitives, BPE tokenization from scratch, LLM pretraining pipelines (gradient accumulation, warmup and cosine schedules, deterministic checkpoint resume), scaling-law experiments and power-law fitting, optimizer internals (AdamW bias correction, decoupled decay, global-norm clipping), gradient checking and finite-difference verification, numerical-parity testing against PyTorch, inference optimization (KV caching, prefill/decode phase analysis, speculative decoding), quantization algorithms from papers (GPTQ Hessian pipeline, AWQ activation-aware scaling, RTN across scale granularities, layerwise sensitivity attribution), distributed training internals (ring all-reduce over sockets, gradient synchronization, parallel-efficiency and comm/compute analysis), approximate nearest-neighbor search (HNSW, IVF-PQ, recall/QPS benchmarking against FAISS), serving-systems engineering (dynamic batching, priority scheduling, load shedding, Poisson load testing, latency-percentile analysis), ML compilation (ONNX IR, operator fusion, constant folding, liveness-based memory planning, differential testing against onnxruntime), production retrieval modeling (two-tower training, in-batch sampled softmax with logQ correction, temporal evaluation, recall/NDCG harnesses), MLOps platform engineering (experiment tracking, model registry and lineage, PSI/KS drift monitoring, canary analysis, automated retraining and rollback), profiling and BLAS-aware NumPy performance work, safetensors and BPE internals, throughput benchmarking and contention forensics, Manim mathematical animation
 
-**Statistics** frequentist and Bayesian A/B testing, sequential testing (SPRT), power analysis, disproportionality methods (PRR, ROR, BCPNN, MGPS), empirical-Bayes shrinkage, FDR control, Mantel-Haenszel confounding screens, Holt-Winters forecasting, anomaly detection (Isolation Forest, control charts), statsmodels, SciPy
+**Statistics** proper scoring rules and forecast evaluation (WIS and its sharpness/overprediction/underprediction decomposition, PIT calibration, pairwise relative skill), leave-one-season-out cross-validation, vintage-aware (point-in-time) backtesting, frequentist and Bayesian A/B testing, sequential testing (SPRT), power analysis, disproportionality methods (PRR, ROR, BCPNN, MGPS), empirical-Bayes shrinkage, FDR control, Mantel-Haenszel confounding screens, Holt-Winters forecasting, anomaly detection (Isolation Forest, control charts), statsmodels, SciPy
 
 **Serving and apps** FastAPI, Streamlit, Plotly, Firebase (Auth, Realtime Database), REST API design
 
-**Engineering practice** Docker, docker-compose, GitHub Actions CI, pytest, mypy, ruff, Git, reproducible pipelines that validate their own output
+**Engineering practice** Docker, docker-compose, GitHub Actions CI and scheduled unattended jobs, pytest, mypy, ruff, Git, reproducible pipelines that validate their own output
