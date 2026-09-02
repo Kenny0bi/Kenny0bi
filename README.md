@@ -92,4 +92,4 @@ A 5-state credit-risk Markov chain for a neobank and a Q-learning intervention a
 
 **Serving and apps** interactive data-journalism pages (hand-built SVG and vanilla JS, GitHub Pages), FastAPI, Streamlit, Plotly, Firebase (Auth, Realtime Database), REST API design
 
-**Engineering practice** self-operating pipelines on scheduled GitHub Actions (a forecast ledger that files, scores and publishes itself weekly), publishing installable libraries with a documented public API, Docker, docker-compose, GitHub Actions CI and scheduled unattended jobs, pytest, mypy, ruff, Git, reproducible pipelines that validate their own output
+**Engineering practice** self-operating pipelines on scheduled GitHub Actions (a forecast ledger that files, scores and publishes itself weekly), publishing installable libraries to PyPI with documented public APIs (three shipped: iyipada, okunfa, idaniloju), Docker, docker-compose, GitHub Actions CI and scheduled unattended jobs, pytest, mypy, ruff, Git, reproducible pipelines that validate their own output
