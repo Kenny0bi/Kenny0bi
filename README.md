@@ -80,7 +80,7 @@ A 5-state credit-risk Markov chain for a neobank and a Q-learning intervention a
 
 ## Stack
 
-**Languages** Python, SQL, JavaScript, HTML, CSS, Bash, LaTeX
+**Languages** Python, R, SQL, JavaScript, HTML, CSS, Bash, LaTeX
 
 **Data engineering** point-in-time data reconstruction and revision handling in surveillance feeds, Kafka, Spark, dbt, Dagster, DuckDB, PostgreSQL, TimescaleDB, Redis, Parquet, batch and streaming ETL, data quality gates, dimensional and OMOP CDM modeling, OMOP standard vocabulary mapping (Athena ICD-10 to SNOMED CT through Maps to and the concept ancestor hierarchy, ATC to RxNorm), rule-based EHR phenotype parsing (FinnGen endpoint definitions: code patterns, inclusion chains, exclusion and control rules), streaming GWAS summary-statistic munging and allele harmonization
 
@@ -96,4 +96,4 @@ A 5-state credit-risk Markov chain for a neobank and a Q-learning intervention a
 
 **Serving and apps** interactive data-journalism pages (hand-built SVG and vanilla JS, GitHub Pages), FastAPI, Streamlit, Plotly, Firebase (Auth, Realtime Database), REST API design
 
-**Engineering practice** self-operating pipelines on scheduled GitHub Actions (a forecast ledger that files, scores and publishes itself weekly), publishing installable libraries to PyPI with documented public APIs (three shipped: iyipada, okunfa, idaniloju), Docker, docker-compose, GitHub Actions CI and scheduled unattended jobs, pytest, mypy, ruff, Git, reproducible pipelines that validate their own output, IEEE LaTeX preprints with every reference checked against Crossref, long-running resumable pipelines that chain their own stages through completion markers with bounded retry and run unattended for days, figure-data generators kept separate from figure scripts so that every published number can be regenerated from the raw inputs
+**Engineering practice** self-operating pipelines on scheduled GitHub Actions (a forecast ledger that files, scores and publishes itself weekly), publishing installable libraries to PyPI with documented public APIs (three shipped: iyipada, okunfa, idaniloju), Docker, docker-compose, GitHub Actions CI and scheduled unattended jobs, pytest, mypy, ruff, Git, reproducible pipelines that validate their own output, IEEE LaTeX preprints with every reference checked against Crossref, long-running resumable pipelines that chain their own stages through completion markers with bounded retry and run unattended for days, figure-data generators kept separate from figure scripts so that every published number can be regenerated from the raw inputs, parallel R implementations of every analysis script across three research repositories (data.table, readxl, jsonlite, curl, digest, MASS, glmnet and base R linear algebra), written to read and write the same intermediate files as their Python siblings and documented at the top of each file wherever the two cannot agree bit for bit
